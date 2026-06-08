@@ -1,6 +1,6 @@
 # A/B Testing Recommendation System Analysis
 
-**Author:** Sandra Quinones Villanueva
+**Author:** Sandra Quinones
 
 ## Project Overview
 
