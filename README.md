@@ -143,16 +143,19 @@ By combining conversion funnel analysis with statistical testing, the project pr
 ```text
 ab-testing-recommendation-system/
 
-├── README.md
-├── AB_Testing_Recommendation_System.ipynb
 ├── datasets/
 │   ├── ab_project_marketing_events_us.csv
 │   ├── final_ab_new_users_upd_us.csv
 │   ├── final_ab_events_upd_us.csv
 │   └── final_ab_participants_upd_us.csv
-└── images/
-    ├── conversion_rates.png
-    └── daily_event_volume.png
+
+├── images/
+│   ├── conversion_rates.png
+│   └── daily_event_volume.png
+
+├── AB_Testing_Recommendation_System.ipynb
+
+└── README.md
 ```
 
 ## Skills Demonstrated
