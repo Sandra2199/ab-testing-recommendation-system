@@ -10,8 +10,6 @@ The objective was to determine whether the new recommendation system improved us
 
 The analysis includes data preparation, exploratory data analysis (EDA), conversion funnel evaluation, statistical hypothesis testing, and business recommendations.
 
----
-
 ## Business Problem
 
 An e-commerce company introduced a new recommendation system intended to increase user engagement and improve conversion performance across the purchase funnel.
@@ -23,8 +21,6 @@ To measure its impact, an A/B test was conducted where:
 
 The primary objective was to determine whether the new recommendation system generated a measurable improvement in conversion behavior.
 
----
-
 ## Tools Used
 
 * Python
@@ -35,8 +31,6 @@ The primary objective was to determine whether the new recommendation system gen
 * SciPy
 * Statistical Hypothesis Testing
 * Google Colab
-
----
 
 ## Dataset Overview
 
@@ -55,8 +49,6 @@ The analysis was performed using four datasets:
 * 21,952 filtered event records
 * EU region users only
 * First 14 days after registration
-
----
 
 ## Methodology
 
@@ -79,8 +71,6 @@ The following analytical techniques were applied:
 * Experiment Validation
 * Data Visualization
 * Two-Proportion Z-Test
-
----
 
 ## Key Findings
 
@@ -106,8 +96,6 @@ The following analytical techniques were applied:
 
 The results indicate a statistically significant difference between the groups. However, the difference favors the control group rather than the treatment group.
 
----
-
 ## Visualizations
 
 ### Conversion Rates by Funnel Stage
@@ -117,8 +105,6 @@ The results indicate a statistically significant difference between the groups. 
 ### Daily Event Volume by Experimental Group
 
 ![Daily Event Volume](images/daily_event_volume.png)
-
----
 
 ## Business Value & Recommendations
 
@@ -135,8 +121,6 @@ By combining conversion funnel analysis with statistical testing, the project pr
 * Analyze user behavior throughout the conversion funnel to identify potential friction points.
 * Conduct follow-up experiments using alternative recommendation strategies.
 * Continue monitoring conversion performance after future recommendation updates.
-
----
 
 ## Project Structure
 
