@@ -1,12 +1,14 @@
 # A/B Testing Recommendation System Analysis
 
+**Author:** Sandra Quinones Villanueva
+
 ## Project Overview
 
 This project evaluates the effectiveness of a new recommendation system through an A/B test conducted on users from the European Union (EU) region.
 
 The objective was to determine whether the new recommendation system improved user engagement and purchase conversion rates compared to the existing recommendation experience.
 
-The analysis includes data preparation, exploratory data analysis (EDA), funnel performance evaluation, statistical hypothesis testing, and business recommendations.
+The analysis includes data preparation, exploratory data analysis (EDA), conversion funnel evaluation, statistical hypothesis testing, and business recommendations.
 
 ---
 
@@ -16,10 +18,23 @@ An e-commerce company introduced a new recommendation system intended to increas
 
 To measure its impact, an A/B test was conducted where:
 
-* **Group A** represented the existing recommendation system (control group)
-* **Group B** represented the new recommendation system (treatment group)
+* **Group A** represented the existing recommendation system (control group).
+* **Group B** represented the new recommendation system (treatment group).
 
-The goal was to determine whether the new recommendation system generated a meaningful improvement in conversion behavior.
+The primary objective was to determine whether the new recommendation system generated a measurable improvement in conversion behavior.
+
+---
+
+## Tools Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* SciPy
+* Statistical Hypothesis Testing
+* Google Colab
 
 ---
 
@@ -36,24 +51,34 @@ The analysis was performed using four datasets:
 
 ### Final Analytical Sample
 
-* **3,481 users analyzed**
-* **21,952 filtered event records**
-* **EU region users only**
-* **First 14 days after registration**
+* 3,481 users analyzed
+* 21,952 filtered event records
+* EU region users only
+* First 14 days after registration
 
 ---
 
-## Analysis Process
+## Methodology
 
-* Cleaned and validated experiment datasets
-* Filtered users according to experiment requirements
-* Verified experiment integrity and group assignments
-* Evaluated user activity and engagement patterns
-* Analyzed conversion funnel performance
-* Calculated conversion rates by experimental group
-* Visualized funnel performance and event activity trends
-* Conducted a two-proportion Z-test to evaluate statistical significance
-* Generated business recommendations based on experiment results
+### Data Preparation
+
+* Validated dataset structure and integrity.
+* Converted date fields to datetime format.
+* Filtered users assigned to the `recommender_system_test`.
+* Restricted analysis to EU users.
+* Included only events occurring within the first 14 days after registration.
+* Verified the absence of duplicate records and cross-group contamination.
+
+### Analysis
+
+The following analytical techniques were applied:
+
+* Exploratory Data Analysis (EDA)
+* Conversion Funnel Analysis
+* User Engagement Analysis
+* Experiment Validation
+* Data Visualization
+* Two-Proportion Z-Test
 
 ---
 
@@ -73,11 +98,13 @@ The analysis was performed using four datasets:
 | ----------------------- | ------- | ------- |
 | Average Events per User | 6.62    | 5.38    |
 
-### Experiment Validation
+### Statistical Results
 
-* No duplicate records identified
-* No users assigned to multiple groups
-* Consistent activity observed throughout the experiment period
+* Z-statistic: **-1.9717**
+* P-value: **0.0486**
+* Significance Level (α): **0.05**
+
+The results indicate a statistically significant difference between the groups. However, the difference favors the control group rather than the treatment group.
 
 ---
 
@@ -93,36 +120,51 @@ The analysis was performed using four datasets:
 
 ---
 
-## Statistical Results
+## Business Value & Recommendations
 
-A two-proportion Z-test was performed to compare purchase conversion rates between the experimental groups.
+### Business Value
 
-### Results
+The analysis demonstrates how controlled experimentation can be used to evaluate product changes before full implementation.
 
-* **Group A Purchase Conversion:** 31.99%
-* **Group B Purchase Conversion:** 28.42%
-* **Z-statistic:** -1.9717
-* **P-value:** 0.0486
-* **Significance Level (α):** 0.05
+By combining conversion funnel analysis with statistical testing, the project provides evidence-based recommendations that support product decision-making and reduce implementation risk.
 
-Since the p-value is below the significance threshold, the null hypothesis was rejected.
+### Recommendations
 
-The analysis indicates a statistically significant difference between the two groups. However, the difference favors the control group rather than the treatment group.
-
----
-
-## Business Recommendations
-
-1. Maintain the existing recommendation system rather than deploying the tested version.
-2. Investigate potential causes of reduced engagement within the treatment group.
-3. Analyze user behavior throughout the purchase funnel to identify friction points.
-4. Conduct follow-up experiments using alternative recommendation strategies.
-5. Continue monitoring conversion performance after future recommendation updates.
+* Maintain the existing recommendation system rather than deploying the tested version.
+* Investigate factors that may have reduced engagement within the treatment group.
+* Analyze user behavior throughout the conversion funnel to identify potential friction points.
+* Conduct follow-up experiments using alternative recommendation strategies.
+* Continue monitoring conversion performance after future recommendation updates.
 
 ---
 
-## Project Files
+## Project Structure
 
-* **Notebook:** `AB_Testing_Recommendation_System.ipynb`
+```text
+ab-testing-recommendation-system/
+
+├── README.md
+├── AB_Testing_Recommendation_System.ipynb
+├── datasets/
+│   ├── ab_project_marketing_events_us.csv
+│   ├── final_ab_new_users_upd_us.csv
+│   ├── final_ab_events_upd_us.csv
+│   └── final_ab_participants_upd_us.csv
+└── images/
+    ├── conversion_rates.png
+    └── daily_event_volume.png
+```
+
+## Skills Demonstrated
+
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Conversion Funnel Analysis
+* Statistical Hypothesis Testing
+* A/B Testing
+* Data Visualization
+* Business Analytics
+* Data Storytelling
+
 * **Datasets:** `/datasets`
 * **Visualizations:** `/images`
